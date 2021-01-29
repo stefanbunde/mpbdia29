@@ -1,3 +1,6 @@
+.PHONY: build
+
+
 help:
 	@echo show this help
 
@@ -10,3 +13,13 @@ stop:
 
 build:
 	docker build --rm -t mptbia2901:latest .
+
+
+pypi: clean distribute
+	twine upload dist/
+
+distribute:
+	python setup.py sdist bdist_wheel
+
+clean:
+	rm -rf dist/ build/ mptbia2901.egg-info/

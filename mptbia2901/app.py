@@ -18,4 +18,3 @@ def get_joke():
 def get_jokes(number_of_jokes):
     jokes = [f'{i+1}. {get_joke()}' for i in range(number_of_jokes)]
     return '<br>'.join(jokes)
-
