@@ -43,5 +43,10 @@ def save_jokes(number_of_jokes):
     return jokeset_id
 
 
+@app.route('/load_jokes/<jokes_id>')
+def load_jokes(jokes_id):
+    return JokeSet.query.filter_by(id=jokes_id).first().jokes
+
+
 if __name__ == '__main__':
     db.create_all()
