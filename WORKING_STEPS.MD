@@ -57,3 +57,19 @@
 ## User documentation
 
 * create README.md
+
+
+## Persisting data
+
+### Prerequisites
+
+* thinking about database strukture
+	* one model with id and set of jokes versus each joke in separate database entry to avoid duplicates
+
+### Implementation
+
+* install sqlalchemy
+* define database model
+* create database tables
+* implement `save_jokes` route
+	* reduce code duplication
